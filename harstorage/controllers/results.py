@@ -351,7 +351,7 @@ class ResultsController(BaseController):
                 scores = dict([("Total Score", 100)])
             
             # Add document to collection
-            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(har.min_timestamp))
 
             result = {  "label":                har.label,
                         "url":                  har.url,
